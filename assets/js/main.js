@@ -31,35 +31,18 @@ AOS.init({
   });
 });  
 
-/*$(document).ready(function() {
-  $("#contactform").validate({
-    rules: {
-      clientname: {
-        required: true
-      },
-      clientmail: {
-        required: true,
-        email: true
-      }
-    },
-    messages: {
-      clientname: {
-        required: "Please enter your name"
-      },
-      clientmail: {
-        required: "Please enter your email",
-        email: "Please enter a valid email address"
-      }
-    },
-    errorPlacement: function(error, element) {
-      error.insertAfter(element);
-    },
-    highlight: function(element) {
-      $(element).addClass('error');
-    },
-    unhighlight: function(element) {
-      $(element).removeClass('error');
-    } 
-  });
-});
-*/
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzU4xZulsdGLWs650OSGpIbW29rZy400eqcixbKlG2w3g5RUx0jL7dua1q4EONv2YVz/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg =document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML= "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })

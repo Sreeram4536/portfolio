@@ -19,7 +19,7 @@
         <div class="container flex-lg-column">
             <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
                 <span class="h3 fw-bold d-block d-lg-none">Sreeram Sadanandan</span>
-                <img src="./assets/images/SREERAM.jpg" class="d-none d-lg-block rounded-circle" alt="">
+                <img src="./assets/images/SREERAM.jpg" class="d-none d-lg-block rounded-circle" alt="profile-pic">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -141,7 +141,7 @@
                     <div class="col-md-6" data-aos="fade-up">
                         <div class="card-custom rounded-4 bg-base shadow-effect">
                             <div class="card-custom-image rounded-4">
-                                <img class="rounded-4" src="./assets/images/More Screens - KFC Delivery App Exploration.jpeg" alt="">
+                                <img class="rounded-4" src="./assets/images/More Screens - KFC Delivery App Exploration.jpeg" alt="kfc-project">
                             </div>
                             <div class="card-custom-content p-4">
                                 <h4>KFC Responsive Clone</h4>
@@ -154,7 +154,7 @@
                     <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="card-custom rounded-4 bg-base shadow-effect">
                             <div class="card-custom-image rounded-4">
-                                <img class="swiggy-img rounded-4" src="./assets/images/Delicious Food.jpeg" alt="">
+                                <img class="swiggy-img rounded-4" src="./assets/images/Delicious Food.jpeg" alt="swiggy-project">
                             </div>
                             <div class="card-custom-content p-4">
                                 <h4>Swiggy Website Clone</h4>
@@ -239,8 +239,6 @@
         </section>
         <!-- //ABOUT -->
 
-        
-       
 
         <!-- CONTACT -->
         <section id="contact" class="full-height px-lg-5">
@@ -312,23 +310,6 @@
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/main.js"></script>
     
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzU4xZulsdGLWs650OSGpIbW29rZy400eqcixbKlG2w3g5RUx0jL7dua1q4EONv2YVz/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg =document.getElementById("msg")
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML= "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML=""
-                },5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
    
 </body>
 
